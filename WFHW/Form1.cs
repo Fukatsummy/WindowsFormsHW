@@ -16,9 +16,23 @@ namespace WFHW
         public Form1()
         {
             InitializeComponent();
+            this.Shown += ShowMesBox;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            /*string[] arr = { "Студент: Лукьянчикова Анастасия", "Предмет: Windows Forms", "Группа: ПВ-111" };
+            int element = 0;
+            string caption;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                element += arr[i].Length;
+                caption = (arr.Length - 1 == i) ? $"MessageBox {i + 1}. Среднее число символов - {element / arr.Length}" : $"MessageBox {i + 1}";
+                MessageBox.Show(arr[i], caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }*/
+        }
+        private void ShowMesBox(object sender, EventArgs e)
         {
             string[] arr = { "Студент: Лукьянчикова Анастасия", "Предмет: Windows Forms", "Группа: ПВ-111" };
             int element = 0;
@@ -27,7 +41,7 @@ namespace WFHW
             for (int i = 0; i < arr.Length; i++)
             {
                 element += arr[i].Length;
-                caption = (arr.Length - 1 == i) ? $"MessageBox {i + 1}. Среднее число символов - {element / arr.Length}" : $"MessageBox {i + 1}";
+                caption = (arr.Length - 1 == i) ? $"MessageBox {i + 1}.  {element / arr.Length}" : $"MessageBox {i + 1}";
                 MessageBox.Show(arr[i], caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

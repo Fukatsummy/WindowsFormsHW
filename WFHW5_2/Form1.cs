@@ -20,7 +20,7 @@ namespace WFHW5_2
             product = new List<Product>();
             btnAdd.Click += BtnAdd_Click;
             btnEdit.Click += BtnEdit_Click;
-            comboBox1.SelectedIndexChanged += ProductStock_SelectedIndexChanged;
+            comboBox1.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             btnAddList.Click += BtnAddList_Click;
         }
 

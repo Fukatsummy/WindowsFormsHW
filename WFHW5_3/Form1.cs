@@ -54,5 +54,10 @@ namespace WFHW5_3
                 btnEdit.Enabled = true;
             }
         }
+
+        private void btnUpload_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

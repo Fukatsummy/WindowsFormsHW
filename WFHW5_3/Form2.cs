@@ -26,9 +26,8 @@ namespace WFHW5_3
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            form1.TB_ReadFile = tbWrite.Text;//изменяем значение текстового поля первой формы
-
-            //сохраняем файл(если не нужно то закомментировать блок)
+            form1.TB_ReadFile = tbWrite.Text;//изменяем значение текстового поля F1
+            //сохраняем файл
             SaveFileDialog save = new SaveFileDialog();
             save.Filter = "All Files(*.*)|*.*|Txt files(*.txt)|*.txt";
             save.FilterIndex = 2;

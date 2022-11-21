@@ -18,9 +18,9 @@ namespace WFHW5_2
         {
             InitializeComponent();
             product = new List<Product>();
-            btnAdd.Click += BtnAdd_Click;
-            btnEdit.Click += BtnEdit_Click;
-            comboBox1.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            btnAdd.Click += btnAdd_Click;
+            btnEdit.Click += btnEdit_Click;
+            //comboBox1.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             btnAddList.Click += BtnAddList_Click;
         }
 
@@ -53,6 +53,11 @@ namespace WFHW5_2
                 MessageBox.Show("Вы не выбрали товар!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
+        }
+       
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+            
         }
     }
 }

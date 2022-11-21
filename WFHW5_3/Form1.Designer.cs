@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnUpload = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.tBReadFile = new System.Windows.Forms.TextBox();
@@ -42,6 +41,7 @@
             this.btnUpload.TabIndex = 0;
             this.btnUpload.Text = "Upload";
             this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click_1);
             // 
             // btnEdit
             // 
@@ -58,8 +58,8 @@
             this.tBReadFile.Location = new System.Drawing.Point(76, 130);
             this.tBReadFile.Multiline = true;
             this.tBReadFile.Name = "tBReadFile";
-            this.tBReadFile.Size = new System.Drawing.Size(550, 20);
             this.tBReadFile.ReadOnly = true;
+            this.tBReadFile.Size = new System.Drawing.Size(550, 20);
             this.tBReadFile.TabIndex = 2;
             this.tBReadFile.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 

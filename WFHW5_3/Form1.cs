@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,20 +17,42 @@ using System.Windows.Forms;
 namespace WFHW5_3
 {
     public partial class Form1 : Form
+
     {
+        public string TB_ReadFile
+        {
+            get { return tBReadFile.Text; }
+            set { tBReadFile.Text = value; }
+        }
+
         public Form1()
         {
             InitializeComponent();
+            btnUpload.Click += btnUpload_Click;
+            string
+                        // btnEdit.Click += btnEdit_Click;
+                        TB_ReadFile = "";
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-
+            Form2 form2 = new Form2(this);
+            form2.Show();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            OpenFileDialog file = new OpenFileDialog();
+            file.Filter = "All Files(*.*)|*.*|Txt files(*.txt)|*.txt";
+            file.FilterIndex = 2;
+            if (file.ShowDialog() == DialogResult.OK)
+            {
+                StreamReader reader = new StreamReader(file.FileName, Encoding.Default);
+                tBReadFile.Clear();
+                tBReadFile.Text = reader.ReadToEnd();
+                reader.Close();
+                btnEdit.Enabled = true;
+            }
         }
     }
 }

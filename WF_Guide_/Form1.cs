@@ -18,6 +18,7 @@ using System.Windows.Forms;
 //■ Программа должна иметь развернутое меню, контекстное меню и возможность работы с горячими клавишами.
 namespace WF_Guide_
 {
+
     public partial class Form1 : Form
     {
         List<string> path;
